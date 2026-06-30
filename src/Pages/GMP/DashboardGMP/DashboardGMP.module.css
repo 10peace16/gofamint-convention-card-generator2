@@ -1,0 +1,54 @@
+.item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    background: white;
+    border-radius: 17.07px;
+    padding: 10px;
+}
+.itemBox{
+    gap: 20px;
+   display: flex;
+
+}
+.dashboard{
+    padding: 20px 5px 20px 5px;
+}
+.item p {
+    margin-bottom: 0;
+    font-size: 12.8px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #212121;
+    text-align: left;
+}
+.item h2{
+    font-size: 25.61px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #212121;
+    text-align: left;
+}
+.item h4{
+    font-size: 17.07px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #212121;
+    text-align: left;
+}
+
+.itemBody{
+    
+    display: flex;
+}
+.itemText{
+    
+    flex: 1;
+    padding: 10px;
+    align-items: left;
+}
+.itemHeader{
+    
+    flex: 1;
+    padding: 10px;
+    display: flex;
+}

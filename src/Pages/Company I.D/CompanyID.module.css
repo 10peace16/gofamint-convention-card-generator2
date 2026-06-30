@@ -1,0 +1,238 @@
+.MainContainer {
+  background-color: rgb(1, 90, 90);
+  /* margin: 100px; */
+  max-width: auto;
+height: 900px;
+padding: 80px;
+}
+.FirstSubContainer{
+  display: flex;
+  background-color: rgb(1, 90, 90);
+  justify-content: center;
+  line-height: 0px;
+  text-align: center;
+  box-shadow: 10px 10px 26px 0px;
+  padding: 0px;
+  max-width: 60%;
+  margin-left: 200px;
+  height: 350px;
+  position: relative;
+  /* overflow: hidden;
+  inset:0; */
+}
+.FirstSubContainer::before, .FirstSubContainer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #002626;
+}
+
+.FirstSubContainer::before{
+  left: 0;
+  border-bottom-right-radius: 28px;
+}
+.FirstSubContainer::after{
+  right: 0px;
+  border-bottom-left-radius: 28px;
+}
+.CompanyName::before, .CompanyName::after{
+  content: "";
+  position:absolute;
+  bottom: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #002626;
+}
+.CompanyName::before{
+  right: 0px;
+  border-top-left-radius: 28px;
+}
+.CompanyName::after{
+  left: 0px;
+   border-top-right-radius: 28px;
+   background-color: rgb(243, 134, 0);
+}
+.SecondSubContainer{
+  display: flex;
+}
+.CompanyName{
+  margin-top: 80px;
+  color: white;
+  font-size: 25px;
+}
+.idcard{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.myidlogo{
+  object-fit: contain;
+  max-width: 50%;
+  height: auto;
+}
+.SecondSubContainer{
+  display: flex;
+  background-color: rgb(1, 90, 90);
+  justify-content: center;
+  line-height: 0px;
+  text-align: center;
+  box-shadow: 10px 10px 26px 0px;
+  padding: 0px;
+  max-width: 60%;
+  margin-left: 200px;
+  height: 350px;
+  margin-top:85px;
+  /* gap: 1px;  */
+}
+
+.Container2::before, .Container2::after{
+  position: absolute;
+  top: 0px;
+  background-color: #002626;
+  content: "";
+  width: 45px;
+  height: 45px;
+}
+.Container2::before{
+  left: 0px;
+  border-bottom-right-radius: 28px;
+  background-color: rgb(243, 134, 0);
+}
+.Container2::after{
+  right: 0px;
+  border-bottom-left-radius: 28px;
+}
+.CompanyName2::before, .CompanyName2::after{
+  content: "";
+  bottom:  0px;
+  width: 45px;
+  height: 45px;
+   background-color: #002626;
+  position:absolute;
+}
+.CompanyName2::before{
+  left: 0px;
+  border-top-right-radius: 28px;
+  background-color: rgb(243, 134, 0); opacity: 0.69;
+}
+.CompanyName2::after{
+  right: 0px;
+  border-top-left-radius: 28px;
+ 
+}
+.Container2{
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Container1{
+  background-color: rgb(243, 134, 0);
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+}
+.CompanyName2{
+  margin-top: 70px;
+  color: white;
+  font-size: 15px;
+}
+.myidlogo2{
+  object-fit: contain;
+  max-width: 25%;
+  height: auto;
+}
+.idcard2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.barcode{
+  object-fit: contain;
+  max-width: 30%;
+  margin-top: 20px;
+}
+
+.ContainerCompanyName1{
+  color:white;
+  font-size: 12px;
+  font-family: sans-serif;
+  /* line-height: 5px; */
+  text-align: left;
+  margin: 50px;
+  /* margin-bottom: 25px; */
+  margin-left: 40px;
+  max-width: 70%;
+  height: 20%;
+}
+.ContainerInfo{
+  display: flex;
+  justify-content:left;
+  /* background-color: #002626; */
+}
+.ContainerContent{
+  color: white;
+  font-size: small;
+  /* flex: 1; */
+  text-align: left;
+  line-height: 3px;
+  /* background-color: aqua; */
+}
+.ContainerIcon{
+   margin-left: 40px;
+   display: flex;
+   flex-direction: column;
+}
+.Icon{
+  margin: 11px;
+  border-radius: 5px;
+}
+.Text1{
+  margin: 0;
+ font-weight: bold;
+ text-align: left;
+}
+
+.button{
+  /* position: relative; */
+  background-color: transparent !important;
+  border: none !important;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 50px;
+  display: flex;
+}
+.button:hover{
+  background-color: transparent !important;
+  width: 40px;
+}
+.button:active{
+  background-color: white !important;
+  transition: ease-in-out 0.5ms;
+}
+
+.mainButton{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+.mainButton p{
+  margin: 0;
+  font-family: "arial";
+
+}
+.ContainerIconText{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+}
+.ContainerIconText p{
+  margin: 0;
+  line-height: 1;
+  font-size: 12px;
+  font-family: sans-serif;
+}

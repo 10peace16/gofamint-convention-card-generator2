@@ -1,0 +1,27 @@
+.groceries{
+    background-color: orange;
+   color:  black; 
+}
+.beauty{
+    background-color: purple;
+    color: white;
+}
+.fragrances{
+    background-color: rgba(141, 10, 10, 0.507);
+    color: white;
+}
+.furniture{
+    background-color: black;
+    color: white;
+}
+.leke{
+    background-color: red;
+    color: white;
+}
+
+.buttonTrigger{
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Manrope';
+}

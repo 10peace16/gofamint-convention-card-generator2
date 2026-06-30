@@ -1,0 +1,575 @@
+.topHeader{
+  background: white; 
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 8px;
+  justify-content: space-between;
+}
+ /* .dashboardCol{
+  display: flex;
+  justify-content: flex-star;
+ } */
+.dashboardText{
+   color: #15803D; 
+  font-family: "Manrope"; 
+  font-weight: 600; 
+  text-align:  left;
+  margin: 0;
+}
+.searchTag{
+  display: flex; 
+  justify-content: flex-end;
+}
+.formControl::placeholder{
+    color: #15803D;
+    font-weight: 500;
+}
+
+.formControl{
+    color: #15803D;
+    text-align: left; 
+    /* padding-left: 55px; */
+    padding: 8px 15px 8px 50px;
+    background: #F0FDF4;
+    font-size: 15px;
+    font-family: "Manrope"; 
+    border: 1px solid #15803D;
+    border-radius: 12px !important;
+
+}
+
+.mainBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+    justify-content: center;
+    margin-top: 10px;
+    /* padding: 5px 45px; */
+    
+}
+.arrowText{
+    display: flex;
+    position: relative;
+}
+/* .boxNumber{
+    padding: 10px;
+} */
+
+.registeredHouseholds{
+    width: 215px;
+    height: 195px;
+    background-color: white;
+    border-top: 8px solid #15803D;
+    padding: 20px;
+    text-align: left;
+    font-family: "Manrope";
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    
+}
+.totalBeneficiaries{
+    width: 215px;
+    height: 195px;
+    background-color: white;
+    border-top: 8px solid #B45309;
+    padding: 20px;
+    text-align: left;
+    font-family: "Manrope";
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.verifiedActive{
+    width: 215px;
+    height: 195px;
+    background-color: white;
+    border-top: 8px solid #1D4ED8;
+    padding: 20px;
+    text-align: left;
+    font-family: "Manrope";
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.pendingVerification{
+    width: 215px;
+    height: 195px;
+    background-color: white;
+    border-top: 8px solid #C2410C;
+    padding: 20px;
+    text-align: left;
+    font-family: "Manrope";
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.districtsCovered{
+    width: 215px;
+    height: 195px;
+    background-color: white;
+    border-top: 8px solid #7E22CE;
+    padding: 20px;
+    text-align: left;
+    font-family: "Manrope";
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.number{
+     text-align: left;
+    font-family: "Manrope";
+    color: #475569;
+    font-weight: 700;
+    margin-top: 5px;
+    
+}
+.title{
+      text-align: left;
+    font-family: "Manrope";
+    color: #9CA3AF;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: -9px;
+}
+.arrowIcon{
+    position: absolute;
+    top: -11px;
+    left: -4px;
+   
+}
+.subText{
+    margin-top: -9px;
+    margin-left: 30px;
+    color: #16A34A;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: 500;
+}
+.subText2{
+    margin-top: -9px;
+    margin-left: 1px;
+    color: #16A34A;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pending{
+    margin-top: -9px;
+    margin-left: 1px;
+    color: #9CA3AF;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* .cardStyle {
+    border: 1px solid #dce5dc;
+    border-radius: 12px;
+   padding: 20px;
+   width: 300px;
+   background: #fff;
+ } */
+
+
+ .container {
+  /* display: flex; */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  /* background: #f9fafb; */
+}
+
+.card {
+  border: 1px solid #22c55e;
+  border-radius: 24px;
+  padding: 20px;
+  background: #fff;
+  padding-bottom: 150px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+.cardMiddle {
+  border: 1px solid #16A34A;
+  border-radius: 24px;
+  padding: 20px;
+  background: #fff;
+  /* padding-bottom: 200px; */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  background-color: #f5ca3c;
+  /* padding-right: 10px; */
+}
+
+.header h4 {
+  margin: 0;
+  color: #14532D;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 12px;
+  color: #166534;
+  font-family: "Manrope";
+  font-weight: 400;
+  opacity: 0.4;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.link {
+  color: #16A34A;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Manrope";
+  margin-top: -16px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.link:hover{
+    color:#14532D;
+    background-color: transparent;
+}
+.arrowLink{
+    rotate: 90deg;
+}
+
+/* BAR CHART */
+.chartBox {
+  height: 200px;
+  margin-top: 30px;
+}
+
+/* DOUGHNUT */
+.doughnutWrapper {
+  position: relative;
+  width: 160px;
+  margin: 20px auto;
+  margin-top: 30px;
+}
+
+.centerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centerText h2 {
+  margin: 0;
+  color: #14532D;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.centerText span {
+  font-size: 16px;
+  color: #166534;
+  font-weight: 400;
+  font-family: "Manrope";
+}
+
+
+/* LEGEND */
+.legend {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.legend div {
+  display: flex;
+  gap: 90px;
+  margin: 15px 0;
+  margin-top: 20px;
+  
+}
+
+.greenDot,
+.orangeDot,
+.redDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 6px;
+  /* display: inline-block; */
+}
+
+.greenDot h6,
+.orangeDot h6,
+.redDot h6 {
+    font-family: "Manrope";
+    font-size: 18px;
+    font-weight: 600;
+    color: #475569;
+    margin-left: 35px;
+}
+.greenDot p,
+.orangeDot p,
+.redDot p {
+    font-family: "Manrope";
+    font-size: 18px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-top: -3px;
+}
+.orangeDot p{
+    margin-left: 9px;
+}
+.redDot p{
+    margin-left: 14px;
+}
+.greenDot { background: #047857; }
+.orangeDot { background: #D97706; }
+.redDot { background: #DC2626; }
+
+/* PROGRESS */
+.sectionTitle {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #166534;
+  font-weight: 500;
+  font-family: "Manrope";
+  text-align: left;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.progressItem {
+  margin: 10px 0;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.progressTrack {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 5px;
+}
+.labelDemo{
+    color: #6B7280;
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+
+/* last one */
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cardTable {
+  flex: 1;
+  background: white;
+  border: 1px solid #16A34A;
+  border-radius: 24px;
+  padding: 40px;
+  
+}
+
+.cardTableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cardTableHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #14532D;
+  font-weight: 600;
+  font-family: "Manrope";
+  text-align: left;
+}
+
+.cardTableHeader p {
+     margin: 0;
+  font-size: 13px;
+  color: #166534;
+  font-family: "Manrope";
+  font-weight: 400;
+  opacity: 0.4;
+  text-align: left;
+
+
+  /* margin: 2px 0 0;
+  font-size: 12px;
+  color: #166534;
+  opacity: 0.5;
+   font-family: "Manrope"; */
+}
+
+.linkViewAll {
+  color: #16A34A;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Manrope";
+  margin-top: -16px;
+    cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.linkViewAll:hover{
+    color:#14532D;
+    background-color: transparent;
+}
+.arrowLink{
+    rotate: 90deg;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  padding: 5px;
+  margin-top: 25px;
+}
+
+.table th {
+  text-align: left;
+  padding-bottom: 8px;
+  color: #166534;
+  font-weight: 600;
+  opacity: 0.7;
+  font-family: "Manrope";
+  text-align: center;
+}
+
+.table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #16A34A; 
+  
+}
+
+.table th {
+  border-bottom: 1px solid #16A34A;
+}
+
+.table tbody tr:nth-child(2) {
+  background-color: #ECFDF5;
+}
+
+.table td {
+  padding: 10px 0;
+  border-top: 1px solid #1E293B;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 13px;
+}
+/* Fade first 3 columns */
+.table td:nth-child(1),
+.table td:nth-child(2),
+.table td:nth-child(3) {
+  opacity: 0.7;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* PROGRESS BAR */
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: #e6efe9;
+  border-radius: 6px;
+}
+
+.progressFill {
+  height: 100%;
+  background: #2e8b57;
+  border-radius: 6px;
+}
+
+/* STATUS COLORS */
+.active {
+  color: #166534;
+  font-weight: 800;
+}
+
+.progress {
+  color: #D97706;
+  font-weight: 800;
+}
+
+.low {
+  color: #DC2626;
+  font-weight: 800;
+}
+
+/* ACTIVITY */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.activityItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+ margin-top: 15px;
+}
+
+
+
+.activityItem p {
+  margin: 0;
+  font-size: 13px;
+  font-family: "Manrope";
+  color: #334155;
+  font-weight: 700;
+  margin-top: 3px;
+  text-align: left;
+}
+
+.timeActivity {
+  font-size: 11px !important;
+  color: #166534 !important;
+  font-family: "Manrope" !important;
+  font-weight: 400 !important;
+  
+}
+
+/* @media (max-width: 768px) {
+    .topHeader{
+    
+    flex-direction: row;
+    align-items: flex-start;
+    
+    padding-left: 20px;
+    
+}
+  .searchTag{
+  margin-left: 2px;
+  margin-top: 5px;
+}
+} */

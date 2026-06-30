@@ -1,0 +1,322 @@
+.mainBox{
+    padding: 60px;
+}
+.mainBoxTop{
+    justify-content: space-between;
+    
+}
+.welcomeBackDiv h6{
+    font-family: "Manrope";
+    font-weight: 500;
+    color: #16A34A;
+    text-align: left;
+}
+.welcomeBackDiv h3{
+    font-family: 'Manrope';
+    font-weight: 600;
+    color: #166534;
+    text-align: left;
+    line-height: 24px;
+}
+.welcomeBackDiv p{
+    text-align: left;
+    font-family: "Manrope";
+    font-weight: 500;
+    color: #6B7280;
+    font-size: 12px;
+    width: 360px;
+}
+/* .welcomeBackDiv{
+    margin: 25px;
+    margin-top: 55px;
+    margin-left: 85px;
+} */
+/* .mainContainerRef{
+    display: flex;
+    border-radius: 16px;
+    border: 0.5px solid #16A34A;
+    background-color: #F0FDF4;
+    width: 431px;
+    justify-content: space-evenly;
+    margin: 25px;
+    line-height: 5px;
+    align-items: center;
+}
+
+.innerCont p{
+    font-family: "Manrope";
+    font-weight: 400;
+    color: #166534;
+    font-size: 10px;
+    text-align: center;
+    
+}
+.innerCont2 p{
+    font-family: "Manrope";
+    font-weight: 600;
+    color: #166534;
+    font-size: 14px;
+   
+    
+}
+
+.innerCont2{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+
+}
+
+.innerCont span{
+    font-family: "Manrope";
+    font-weight: 600;
+    color: #166534;
+    font-size: 14px;
+}
+.copyIcon{
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.copyNumber{
+    display: flex;
+}
+
+.refNumber{
+    margin-top: 15px;
+}
+.pending{
+    color: #D97706 !important;
+}
+
+.innerCont:not(:last-child){
+    border-right: 0.5px solid #16A34A;
+
+} */
+
+.mainContainerRef {
+  display: flex;
+  border-radius: 16px;
+  border: 0.5px solid #16A34A;
+  background-color: #F0FDF4;
+  width: 431px;
+  /* margin: 25px;  */
+  overflow: hidden;  /*important for clean borders */
+  align-items: stretch;
+}
+
+/*  make all sections equal */
+.innerCont {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+}
+
+/* vertical divider */
+.innerCont:not(:last-child) {
+  border-right: 0.5px solid #16A34A;
+}
+
+/* label */
+.innerCont p {
+  font-family: "Manrope";
+  font-weight: 400;
+  color: #166534;
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+/* value row (text + icon) */
+.innerCont2 {
+  display: flex;
+  align-items: center; /*  fix alignment */
+  justify-content: center;
+  gap: 2px;
+}
+
+/* value text */
+.innerCont2 p,
+.innerCont span {
+  font-family: "Manrope";
+  font-weight: 600;
+  color: #166534;
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* icon */
+.copyIcon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-top: 0; /*  remove negative margin */
+}
+
+/* status */
+.pending {
+  color: #D97706 !important;
+}
+
+.householdInfo{
+    background: white;
+    border-radius: 12px;
+    /* margin-top: 55px;
+    margin-right: 95px; */
+    padding-bottom: 20px;
+}
+.householdHeader h6{
+    color:#16A34A ;
+    font-weight: 500;
+    font-family: "Manrope";
+    font-size: 14px;
+    text-align: left;
+    padding-top: 15px;
+}
+.householdBody{
+    display: flex;
+    justify-content: space-between;
+}
+.householdBody span{
+    color: #166534;
+    font-weight: 600;
+    font-family: "Manrope";
+    font-size: 12px;
+}
+.householdBody h6{
+    color: #334155;
+    font-weight: 400;
+    font-family: "Manrope";
+    font-size: 12px;
+}
+.warningBox{
+    display: flex;
+    background: #FFFBEB;
+    border-radius: 8px;
+    border: 0.5px solid #D97706;
+    gap: 6px;
+    padding: 0px 10px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.warningBox span{
+    font-family: "Manrope";
+    font-size: 12px;
+    color: #B45309;
+    font-weight: 600;
+    text-align: left;
+}
+.warningBox p{
+    font-family: "Manrope";
+    font-size: 12px;
+    color: #B45309;
+    font-weight: 400;
+    text-align: left;
+}
+
+.itemText2{
+    display: flex;
+    gap: 10px;
+}
+.itemText1 h6{
+    color: #166534;
+    font-family: "Manrope";
+    font-weight: 600;
+    text-align: left;
+}
+.itemText1 p{
+    color: #15803D;
+    font-family: "Manrope";
+    font-weight: 400;
+    text-align: left;
+    font-size: 16px;
+}
+.itemText2 p{
+    font-family: "Manrope";
+    text-align: left;
+    color: #166534;
+    font-weight: 500;
+    font-size: 14px;
+}
+.itemText2 span{
+    font-family: "Manrope";
+    text-align: left;
+    color: #14532D;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.5;
+}
+.itemText2{
+    border-bottom: 0.3px solid #16A34A;
+    margin-top: 10px;
+}
+.itemText2:nth-last-child(-n+2){
+    border-bottom: none;
+}
+.quickAction{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.quickActionBox{
+     display: flex;
+     border: 0.5px solid #16A34A;
+     border-radius: 16px;
+     padding: 16px;
+     align-items: center;
+     justify-content: space-between;
+    margin: 15px;
+    
+}
+
+.quickActionBox p{
+    font-family: "Manrope";
+    text-align: left;
+    color: #166534;
+    font-weight: 600;
+    font-size: 14px;   
+    margin: 0;
+}
+.quickActionButton{
+    background: transparent;
+    border: none;
+}
+.quickActionButton:hover{
+    background: transparent !important;
+    color: none !important;
+    transform: translate(5px);
+}
+.thirdBox{
+     display: flex;
+     border: 0.5px solid #16A34A;
+     background-color: #F0FDF4;
+     border-radius: 16px;
+     padding: 16px;
+     align-items: center;
+     justify-content: space-between;
+     /* margin: 15px; */
+}
+
+.subThirdBox h6{
+    font-family: "Manrope";
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    color: #14532D;
+}
+.subThirdBox p{
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #14532D;
+    opacity: 0.5;
+}

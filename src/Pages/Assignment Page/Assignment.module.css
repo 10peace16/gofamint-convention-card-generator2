@@ -1,0 +1,129 @@
+.MainContainer{
+    background-color: black;
+    margin: 20px;
+    max-width: 100%;
+    padding: 20px;
+    position: relative;
+}
+.FirstSubContainer{
+    display: flex;
+    gap: 20px;
+    height: 285px;
+    
+}
+.FirstInnerContA{
+    background-color: #005055;
+    flex: 3;
+    height: 1,190px;
+    left: 54px;
+    border-radius: 13.53px;
+    /* display: flex; */
+}
+.SecondSubContainer{
+    display: flex;
+    max-width: 100%;
+    /* margin-top: 20px; */
+}
+.SecondInnerContA{
+    background-color: #005055;
+    flex: 1;
+    height: 285px;
+    left:1261px;
+    border-radius: 13.53px;
+}
+.SecondSubContainer{
+    display: flex;
+    /* background-color: yellow; */
+    gap: 20px;
+    
+}
+.FirstInnerA{
+    /* background-color: green; */
+    flex: 1;
+}
+.FirstInner1{
+    background-color: #005055;
+    width: 262px;
+    height: 282px;
+    border-radius: 13.53px;
+    flex: 1;
+}
+.FirstInner2{
+    background-color: #005055;
+    width: 262px;
+    height: 282px;
+    border-radius: 13.53px;
+    flex: 1;
+}
+.SecondInnerB{
+    background-color: #005055;
+    width: 540px;
+    height: 586px;
+    border-radius: 13.53px;
+    margin-top: 20px;
+    flex: 2;
+    margin-right: 5px;
+}
+/* .ThirdInnerC{
+    background-color: burlywood;
+} */
+.ThirdInner1{
+     background-color: #005055;
+     width: 262px;
+     height: 282px;
+     border-radius: 13.53px;
+     flex: 1;
+}
+.ThirdInner2{
+    background-color: #005055;
+     width: 262px;
+     height: 282px;
+     border-radius: 13.53px;
+     flex: 1;
+}
+.FourthInnerD{
+    background-color: #005055;
+    width: 540px;
+    height: 593px;
+    border-radius: 13.53px;
+    margin-top: 20px;
+    flex: 3, 1, 1;
+}
+.Edvice{
+    margin-top: 65px;
+    object-fit: contain;
+    max-width: 250px;
+    height: 147px;
+    margin-left: 60px;
+}
+.pics{  
+    position:absolute;
+    top: 40px;
+    right: 380px;
+    width: 25%;
+}
+.Text{
+    position: absolute;
+    top: 20px;
+    left: 500px;
+    font-family: sans-serif;
+    line-height: 6px;
+    text-align: right;
+    color: white;
+}
+.Link{
+    /* position: absolute; */
+    /* top: 20px; */
+    background-color: antiquewhite;
+    color:white;
+    margin-top: 40px;
+}
+
+.Container{
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    padding-left: 40px;
+}

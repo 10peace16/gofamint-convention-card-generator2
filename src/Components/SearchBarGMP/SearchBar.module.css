@@ -1,0 +1,32 @@
+.topHeader{
+  display: flex;
+  background: white; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  flex: 1;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.searchTag{
+  display: flex; 
+  /* justify-content: flex-end; */
+}
+
+.formControl{
+    color: #212121;
+    text-align: left; 
+    padding: 10px 15px 10px 50px;
+    background: #F5F5F5;
+    font-size: 14px;
+    font-family: "Montserrat"; 
+    border: none;
+    border-radius: 8px !important;
+}
+.textBox p{
+    font-family: "Montserrat";
+    font-weight: 500;
+     color: #212121;
+    margin-bottom: 0;
+    font-size: 12px;
+}

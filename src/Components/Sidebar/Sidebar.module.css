@@ -1,0 +1,71 @@
+.headImage{
+    margin-bottom: 20px;
+}
+
+.headerSidebar h6{
+    color: green;
+    font-family: "Manrope";
+    font-weight: 600;
+    text-align: left;
+}
+.sidebarContainer{
+    width: 220px; 
+    background: #14532D; color: white; 
+    height: 1024px; 
+    padding-top: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+
+
+/* .sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #14532d;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+} */
+
+.logo h3 {
+  margin: 0;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #a7f3d0;
+}
+
+.section {
+  padding: 20px;
+}
+
+.section p {
+  font-size: 12px;
+  color: green;
+    font-family: "Manrope";
+    font-weight: 600;
+    text-align: left;
+  margin-bottom: 10px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #166534;
+}
+
+.menu-item.active {
+  background-color: #22c55e;
+  color: #000;
+}

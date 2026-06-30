@@ -1,0 +1,24 @@
+.HeadSection {
+  display: flex;
+  margin: 50px 60px;
+  line-height: 0px;
+}
+.SubSection {
+  margin-right: 99px;
+  font-size: small;
+}
+.line {
+  width: 91%;
+}
+.text {
+  margin-left: 60px;
+  margin-top: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.containerSec {
+  display: flex;
+  max-width: 47%;
+  margin-left: 60px;
+  margin-top: 60px;
+  gap: 70px;
+}

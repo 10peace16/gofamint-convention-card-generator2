@@ -1,0 +1,262 @@
+.header h6{
+    /*font-family 'Manrope'*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0C06AC;
+    text-align: left;
+    font-size: 18px;
+    line-height: 0.5;
+    margin-bottom: 30px;
+}
+.header p{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #201F1F;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+.input{
+    text-align: left;
+    padding: 10px;
+    border: 1px solid rgba(6, 6, 199, 0.4);
+    border-radius: 8px;
+    background: #f9f9fd;
+}
+.input::placeholder{
+    color: #5f5c5c;
+    /* font-family: "Manrope"; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    opacity: 0.5;
+}
+.input:focus{
+    border: 1px solid #0C05D2 !important;
+    box-shadow: none;
+}
+.label{
+    display: block;
+    /* font-family: "Manrope"; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left !important;
+    margin-bottom: 6px;
+    color: #1E293B;
+}
+
+.header2 h6{
+    /*font-family 'Manrope'*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #201F1F;
+    text-align: left;
+    font-size: 15px;
+    margin: 0;
+}
+.header2 p{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9CA3AF;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+.input option{
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.description{
+     text-align: left;
+    padding-bottom: 90px;
+    border: 1px solid rgba(6, 6, 199, 0.4);
+    border-radius: 8px;
+    background: #f9f9fd;
+}
+
+.description::placeholder{
+    color: #5f5c5c;
+    /* font-family: "Manrope"; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    opacity: 0.5;
+    margin: 0;
+}
+.description:focus{
+    border: 1px solid #0C05D2 !important;
+    box-shadow: none;
+}
+
+.upload{
+     text-align: left;
+    padding: 90px;
+    border: 2px dashed rgba(6, 6, 199, 0.4);
+    border-radius: 8px;
+    background: #f9f9fd;
+    /* position: relative; */
+}
+
+.upload::placeholder{
+    color: #5f5c5c;
+    /* font-family: "Manrope"; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    opacity: 0.5;
+    margin: 0;
+}
+.upload:focus{
+    box-shadow: none;
+   border: 2px dashed rgba(6, 6, 199, 0.4);
+    /* border: 2px dashed #0C05D2; */
+}
+.label p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9CA3AF;
+    text-align: left;
+    font-size: 12px;
+}
+
+.uploadText h6{
+    /*font-family 'Manrope'*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9CA3AF;
+    text-align: center;
+    font-size: 16px;
+    line-height: 0.5;
+}
+.uploadText p{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9CA3AF;
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+.uploadIcon{
+    background: transparent !important;
+    border: none !important;
+}
+.uploadText a{
+    text-decoration: none;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9CA3AF;
+    text-align: center;
+    font-size: 16px;
+    line-height: 0.5;
+}
+.submitButton{
+    background: #0C06AC !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 8px 65px;
+    color: #FFFFFF !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+.cancelButton{
+    background: #FFFFFF !important;
+    border: 1px solid #0C06AC !important;
+    border-radius: 12px !important;
+    padding: 8px 45px;
+    color: #0C06AC !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.submitButton:hover{
+    background: #0C05D2 !important;
+    border: none !important;
+    color: #FFFFFF !important;
+}
+.cancelButton:hover{
+    background: #0C06AC !important;
+    border: none !important;
+    color: #FFFFFF !important;
+}
+
+.backButton{
+    background: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    display: flex;
+    padding: 10px 15px;
+    display: flex; 
+     margin-bottom: 30px;   
+}
+
+.modalOverlay{
+    border: none !important;
+   position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  display: flex;
+}
+
+.modalBox{
+    background: "white";
+    border-radius: 16px !important;
+}
+
+.modalContent{
+    background: #FFFFFF !important;
+    border-radius: 16px !important;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 433px;
+    height: 326px;
+    padding: 20px;
+}
+.closeButton{
+    background: transparent !important;
+    border: none !important;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+.closeButton:hover{
+   color: #000000;
+}
+.headerModal h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0C06AC;
+    margin-bottom: 10px;
+}
+.body p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #201F1F;
+    font-size: 14px;
+}
+.modalBody{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.queueButton{
+    background: #0C06AC !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 8px 20px;
+    color: #FFFFFF !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.queueButton:hover{
+    background: #0C05D2 !important;
+    border: none !important;
+    color: #FFFFFF !important;
+}

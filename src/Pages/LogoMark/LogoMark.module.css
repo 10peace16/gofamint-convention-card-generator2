@@ -1,0 +1,72 @@
+.HeadSection {
+  display: flex;
+  margin: 50px 60px;
+  line-height: 0px;
+}
+.SubSection {
+  margin-right: 99px;
+  font-size: small;
+}
+.line {
+  width: 91%;
+}
+.text {
+  margin-left: 60px;
+  margin-top: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+.textbody {
+  margin-left: 130px;
+  margin-top: 35px;
+  max-width: 37%;
+  font-size: 15.5px;
+  margin-right: -90px;
+}
+.maintextbody {
+  display: flex;
+  /* margin-left: 200px; */
+}
+.MainContainer {
+  display: flex;
+  height: 400px;
+}
+.Logo {
+  background-color: black;
+  display: flex;
+  margin: 58px;
+  padding: 20%;
+  justify-content: center;
+  margin-top: -170px;
+}
+
+/* @media screen and (max-width: 768px) {
+  .HeadSection {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  .SubSection {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: medium;
+  }
+  .line {
+    width: 100%;
+  }
+  .text {
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .textbody {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: none;
+    font-size: 14px;
+    text-align: center;
+    margin-right: -90px;
+  }
+  
+} */

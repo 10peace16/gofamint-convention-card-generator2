@@ -1,0 +1,67 @@
+.header{
+    background: #14532D;
+    padding: 20px;
+    /* padding-left: 40px; */
+    /* padding-right: 10px; */
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navLink, .navLink span{
+    display: flex;
+    align-items: center;
+    /* text-decoration: none !important; */
+    gap: 4px;
+    font-family: "Manrope"; 
+    color: #F9FBF9;
+    font-weight: 600;
+}
+.navLink span{
+    font-size: 14px;
+}
+.navLinkActive {
+    border-bottom: 1px solid #F9FBF9; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    gap: 4px;
+    font-family: "Manrope"; 
+    color: #F9FBF9;
+    font-weight: 600;
+}
+.navLinkActive span{
+      cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    gap: 4px;
+    font-family: "Manrope"; 
+    color: #F9FBF9;
+    font-weight: 600;
+}
+ .NavContainer{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+.navItem{
+    gap: 25px;
+}
+
+.NavBellIcon{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.bellNotification{    
+  filter: brightness(1) saturate(50%) invert(2%) sepia(5%) saturate(50%) hue-rotate(330deg);
+}
+
+
+/* .welcomeBackDiv h6{
+
+} */
