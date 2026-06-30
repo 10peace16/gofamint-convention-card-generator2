@@ -20,28 +20,34 @@ import {
 import background from "../../Assets/backgroundfin.png";
 import backgroundDyna from "../../Assets/backgroundDyna.png";
 import backgroundPage from "../../Assets/backgroundPage.jpg";
-import theme from "../../Assets/themeGof.png";
-import year from "../../Assets/yearGof.png";
+// import theme from "../../Assets/themeGof.png";
+// import year from "../../Assets/yearGof.png";
 import cloudUpload from "../../Assets/cloudUpload.png";
 import border from "../../Assets/borderGof.png";
 import logo from "../../Assets/logoGof2.png";
 import classes from "./GofamintJubilee.module.css";
 import heic2any from "heic2any";
 import { Spinner } from "react-bootstrap";
+import gofamintCard from "../../Assets/GOFAMINT-card.png";
+import wedding from "../../Assets/#ABISOL'26 IV.png";
+import birthday from "../../Assets/BIGLOVESQUARE.png";
 // import { toPng } from "html-to-image";
 
 const creatorWorks = [
-  {
+   {
     title: "GOFAMINT @ 70 Card Generator",
     description: "A responsive celebration card creator with image upload and one-click download.",
+    image: gofamintCard,
   },
   {
-    title: "E-Procurement Landing Page",
-    description: "A public-service landing page with structured content and clean navigation.",
+    title: "Birthday Flyer",
+    description: "Creative birthday celebration design.",
+    image: birthday,
   },
   {
-    title: "Social Register Dashboard",
-    description: "A data dashboard interface for viewing applications, profiles, and household records.",
+    title: "Wedding IV",
+    description: "Creative wedding IV design.",
+    image: wedding,
   },
 ];
 
@@ -86,6 +92,7 @@ function GofamintJubilee() {
   });
   const [previewImage, setPreviewImage] = useState("");
   const [isDownloading, setIsDownloading] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const cardRef = useRef(null);
 
@@ -109,48 +116,6 @@ function GofamintJubilee() {
   const cloudUploadClick = () => {
     ImageRef.current.click();
   }
-  
-
-  // const handlePhotoChange = (e) => {
-  //   const file = e.target.files[0];
-
-  //   if (!file) return;
-
-  //   // Allowed image types
-  //   const allowedTypes = [
-  //     "image/jpeg",
-  //     "image/jpg",
-  //     "image/png",
-  //     "image/webp",
-  //     "image/gif",
-  //     "image/bmp",
-  //   ];
-
-
-
-  //   // Check file type
-  //   if (!allowedTypes.includes(file.type)) {
-  //     alert("Please upload a JPG, JPEG, PNG, WEBP, GIF or BMP image.");
-  //     return;
-  //   }
-
-  //   // Check file size (5MB max)
-  //   const maxSize = 5 * 1024 * 1024;
-
-  //   if (file.size > maxSize) {
-  //     alert("Image size should not exceed 5MB.");
-  //     return;
-  //   }
-
-  //   // Save image
-  //   setFormData((prev) => ({
-  //     ...prev,
-  //     photo: file,
-  //   }));
-
-  //   // Preview image
-  //   setPreviewImage(URL.createObjectURL(file));
-  // };
     
   const handlePhotoChange = async (e) => {
     const file = e.target.files[0];
@@ -298,23 +263,23 @@ const downloadCard = async () => {
   try {
     setIsDownloading(true);
 
-    await document.fonts.ready;
+    // await document.fonts.ready;
 
-    const images = cardRef.current.querySelectorAll("img");
+    // const images = cardRef.current.querySelectorAll("img");
 
-    await Promise.all(
-      [...images].map((img) => {
-        if (img.complete) return Promise.resolve();
+    // await Promise.all(
+    //   [...images].map((img) => {
+    //     if (img.complete) return Promise.resolve();
 
-        return new Promise((resolve) => {
-          img.onload = resolve;
-          img.onerror = resolve;
-        });
-      })
-    );
+    //     return new Promise((resolve) => {
+    //       img.onload = resolve;
+    //       img.onerror = resolve;
+    //     });
+    //   })
+    // );
 
     const canvas = await html2canvas(cardRef.current, {
-      scale: 5,
+      scale: 4,
       useCORS: true,
       backgroundColor: null,
       imageTimeout: 0,
@@ -584,7 +549,10 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
                       <h1 className={classes.postYears}>
                         {yearsInGofamint || 0} Year(s)
                       </h1>
-                      <p className={classes.wordReflection}>{`"${formData.word}"` || "Convention Reflection"}
+                     <p className={classes.wordReflection}>
+                        {formData.word
+                          ? `"${formData.word}"`
+                          : "Convention Reflection"}
                       </p>
                     </div>
                   </div>
@@ -610,17 +578,38 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
               <p className={classes.creatorEyebrow}>About Me</p>
               {/* <h2 className={classes.creatorTitle}>Glory, Frontend Developer</h2> */}
               <p className={classes.creatorBio}>
-                Hi, I'm Glory Adelaka (10Peace), a Frontend Developer and Graphic Designer passionate about creating responsive web applications and engaging visual designs. I build intuitive user interfaces with React and design professional flyers, event materials, and promotional graphics for churches, schools, businesses, birthdays, and other special occasions. I enjoy combining creativity and technology to create solutions that are both functional and visually appealing.
+                Hi, I'm Glory Adelaka (10Peace), a Frontend Developer and Graphics Designer passionate about creating responsive web applications and engaging visual designs. I build intuitive user interfaces with React and design professional flyers, event materials, and promotional graphics for churches, schools, businesses, birthdays, and other special occasions. I enjoy combining creativity and technology to create solutions that are both functional and visually appealing.
               </p>
 
               <div className={classes.workGrid}>
                 {creatorWorks.map((work) => (
-                  <article className={classes.workCard} key={work.title}>
+                  <article
+                    key={work.title}
+                    className={classes.workCard}
+                    onClick={() => setSelectedImage(work.image)}
+                  >
+                    <div className={classes.imageOverlay}>
+                      View Image
+                    </div>
+
                     <h3>{work.title}</h3>
+
                     <p>{work.description}</p>
                   </article>
                 ))}
               </div>
+              {selectedImage && (
+                <div
+                  className={classes.modal}
+                  onClick={() => setSelectedImage(null)}
+                >
+                  <img
+                    src={selectedImage}
+                    alt="Project"
+                    className={classes.modalImage}
+                  />
+                </div>
+              )}
 
               <div className={classes.socialLinks} aria-label="Creator social links">
                 {creatorLinks.map((link) => {
