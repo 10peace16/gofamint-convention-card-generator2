@@ -29,7 +29,7 @@ import classes from "./GofamintJubilee.module.css";
 import heic2any from "heic2any";
 import { Spinner } from "react-bootstrap";
 import gofamintCard from "../../Assets/GOFAMINT-card.png";
-import wedding from "../../Assets/#ABISOL'26 IV.png";
+import wedding from "../../Assets/ABISOL.png";
 import birthday from "../../Assets/BIGLOVESQUARE.png";
 // import { toPng } from "html-to-image";
 
