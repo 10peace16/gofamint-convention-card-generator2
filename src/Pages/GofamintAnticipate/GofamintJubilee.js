@@ -20,8 +20,6 @@ import {
 import background from "../../Assets/backgroundfin.png";
 import backgroundDyna from "../../Assets/backgroundDyna.png";
 import backgroundPage from "../../Assets/backgroundPage.jpg";
-// import theme from "../../Assets/themeGof.png";
-// import year from "../../Assets/yearGof.png";
 import cloudUpload from "../../Assets/cloudUpload.png";
 import border from "../../Assets/borderGof.png";
 import logo from "../../Assets/logoGof2.png";
@@ -31,7 +29,8 @@ import { Spinner } from "react-bootstrap";
 import gofamintCard from "../../Assets/GOFAMINT-card.png";
 import wedding from "../../Assets/ABISOL.png";
 import birthday from "../../Assets/BIGLOVESQUARE.png";
-// import { toPng } from "html-to-image";
+import schoolFlyer from "../../Assets/EXCEL COLLEGE ADMISSION.png";
+import confetti from "canvas-confetti";
 
 const creatorWorks = [
    {
@@ -41,13 +40,18 @@ const creatorWorks = [
   },
   {
     title: "Birthday Flyer",
-    description: "Creative birthday celebration design.",
+    description: "Premium birthday celebration design.",
     image: birthday,
   },
   {
     title: "Wedding IV",
     description: "Creative wedding IV design.",
     image: wedding,
+  },
+  {
+    title: "School Flyer",
+    description: "Admission campaign design.",
+    image: schoolFlyer,
   },
 ];
 
@@ -93,6 +97,7 @@ function GofamintJubilee() {
   const [previewImage, setPreviewImage] = useState("");
   const [isDownloading, setIsDownloading] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const cardRef = useRef(null);
 
@@ -213,71 +218,37 @@ function GofamintJubilee() {
       });
   };
 
+const celebrateDownload = () => {
+  // Left burst
+  confetti({
+    particleCount: 80,
+    angle: 60,
+    spread: 70,
+    origin: { x: 0 },
+    colors: ["#0B7A4A", "#FFD700", "#FFFFFF", "#FF4500", "#1E90FF"],
+  });
 
-// const downloadCard = async () => {
-//   await document.fonts.ready;
+  // Right burst
+  confetti({
+    particleCount: 80,
+    angle: 120,
+    spread: 70,
+    origin: { x: 1 },
+    colors: ["#0B7A4A", "#FFD700", "#FFFFFF", "#FF4500", "#1e90ff"],
+  });
 
-//   const dataUrl = await toPng(cardRef.current, {
-//     cacheBust: true,
-//     pixelRatio: 4,
-//   });
-
-//   const link = document.createElement("a");
-//   link.download = "GOFAMINT-70-Convention-Anticipate.png";
-//   link.href = dataUrl;
-//   link.click();
-// };
-
-// const downloadCard = async () => {
-
-//   await document.fonts.ready;
-
-//   const images = cardRef.current.querySelectorAll("img");
-
-//   await Promise.all(
-//     [...images].map((img) => {
-//       if (img.complete) return Promise.resolve();
-
-//       return new Promise((resolve) => {
-//         img.onload = resolve;
-//         img.onerror = resolve;
-//       });
-//     })
-//   );
-
-//   const canvas = await html2canvas(cardRef.current, {
-//     scale: 4,
-//     useCORS: true,
-//     backgroundColor: null,
-//     imageTimeout: 0,
-//     logging: false,
-//   });
-
-//   const link = document.createElement("a");
-//   link.download = "GOFAMINT-70-Convention-Anticipate.png";
-//   link.href = canvas.toDataURL("image/png", 1.0);
-//   link.click();
-// };
+  // Center burst
+  confetti({
+    particleCount: 120,
+    spread: 120,
+    origin: { y: 0.6 },
+    colors: ["#0B7A4A", "#FFD700", "#FFFFFF", "#FF4500", "#1E90FF"],
+  });
+};
 
 const downloadCard = async () => {
   try {
     setIsDownloading(true);
-
-    // await document.fonts.ready;
-
-    // const images = cardRef.current.querySelectorAll("img");
-
-    // await Promise.all(
-    //   [...images].map((img) => {
-    //     if (img.complete) return Promise.resolve();
-
-    //     return new Promise((resolve) => {
-    //       img.onload = resolve;
-    //       img.onerror = resolve;
-    //     });
-    //   })
-    // );
-
     const canvas = await html2canvas(cardRef.current, {
       scale: 4,
       useCORS: true,
@@ -290,6 +261,13 @@ const downloadCard = async () => {
     link.download = "GOFAMINT-70-Convention-Anticipate.png";
     link.href = canvas.toDataURL("image/png", 1.0);
     link.click();
+    celebrateDownload();
+
+    setShowSuccess(true);
+
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
   } catch (error) {
     console.error(error);
     alert("Failed to download card.");
@@ -298,6 +276,8 @@ const downloadCard = async () => {
     setIsDownloading(false);
   }
 };
+
+
 
 
 const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(Region)";
@@ -406,36 +386,6 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
                     />
                   </Form.Group>
 
-                  {/* Department */}
-                  {/* <Form.Group className="mb-3">
-                    <Form.Label>Department</Form.Label>
-
-                    <Form.Select
-                      name="department"
-                      value={formData.department}
-                      onChange={handleChange}
-                    >
-                      <option value="">
-                        Select Department
-                      </option>
-                      <option value="Choir">
-                        Choir
-                      </option>
-                      <option value="Ushering">
-                        Ushering
-                      </option>
-                      <option value="Youth">
-                        Youth
-                      </option>
-                      <option value="Media">
-                        Media
-                      </option>
-                      <option value="Sunday School">
-                        Sunday School
-                      </option>
-                    </Form.Select>
-                  </Form.Group> */}
-
                   {/* Photo Upload */}
                   <div className={classes.imageUploadBox}>
                     <Button type="button" className={classes.uploadIcon} onClick={cloudUploadClick}>
@@ -483,7 +433,6 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
             </Card>
           </Col>
           <Col lg={7} md={6} className={classes.previewColumn}>
-            {/* <div className={classes.socialPostWrapper}> */}
               <Card
                 ref={cardRef}
                 className={`border-0 shadow overflow-hidden ${classes.socialPostCard}`}
@@ -563,7 +512,7 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
         </Row>
 
         <section id="creator-portfolio" className={classes.creatorSection}>
-          <Row className="align-items-center g-4">
+          <Row className="g-4">
             <Col lg={4}>
               <div className={classes.creatorPhotoShell}>
                 <img
@@ -576,29 +525,38 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
 
             <Col lg={8}>
               <p className={classes.creatorEyebrow}>About Me</p>
-              {/* <h2 className={classes.creatorTitle}>Glory, Frontend Developer</h2> */}
               <p className={classes.creatorBio}>
                 Hi, I'm Glory Adelaka (10Peace), a Frontend Developer and Graphics Designer passionate about creating responsive web applications and engaging visual designs. I build intuitive user interfaces with React and design professional flyers, event materials, and promotional graphics for churches, schools, businesses, birthdays, and other special occasions. I enjoy combining creativity and technology to create solutions that are both functional and visually appealing.
               </p>
-
+              
               <div className={classes.workGrid}>
                 {creatorWorks.map((work) => (
                   <article
                     key={work.title}
                     className={classes.workCard}
-                    onClick={() => setSelectedImage(work.image)}
+                    onClick={() => setSelectedImage(work)}
                   >
-                    <div className={classes.imageOverlay}>
-                      View Image
+                    <div className={classes.workImage}>
+                      <img src={work.image} alt={work.title} />
+
+                      <div className={classes.imageOverlay}>
+                        <span>👁 View Full Design</span>
+                      </div>
+
+                      <div className={classes.mobileBadge}>
+                        👁 Tap to View
+                      </div>
                     </div>
 
-                    <h3>{work.title}</h3>
-
-                    <p>{work.description}</p>
+                    <div className={classes.workContent}>
+                      <h3>{work.title}</h3>
+                      <p>{work.description}</p>
+                    </div>
                   </article>
                 ))}
               </div>
-              {selectedImage && (
+              
+              {/* {selectedImage && (
                 <div
                   className={classes.modal}
                   onClick={() => setSelectedImage(null)}
@@ -608,6 +566,34 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
                     alt="Project"
                     className={classes.modalImage}
                   />
+                </div>
+              )} */}
+
+              {selectedImage && (
+                <div
+                  className={classes.modal}
+                  onClick={() => setSelectedImage(null)}
+                >
+                  <div
+                    className={classes.modalContent}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <button
+                      className={classes.closeButton}
+                      onClick={() => setSelectedImage(null)}
+                    >
+                      ✕
+                    </button>
+
+                    <img
+                      src={selectedImage.image}
+                      alt={selectedImage.title}
+                    />
+
+                    <h2>{selectedImage.title}</h2>
+
+                    <p>{selectedImage.description}</p>
+                  </div>
                 </div>
               )}
 
@@ -633,6 +619,17 @@ const regionText = formData.region ? `(RG${formData.region.toUpperCase()})` : "(
           </Row>
         </section>
       </Container>
+      {showSuccess && (
+        <div className={classes.successPopup}>
+          <div className={classes.successIcon}>🎉</div>
+
+          <h3>Download Successful!</h3>
+
+          <p>
+            Your GOFAMINT Convention Anticipate Card has been downloaded successfully.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
